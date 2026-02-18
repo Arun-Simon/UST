@@ -1,0 +1,25 @@
+# Self_case
+UST Hackolthon
+Automatic Backup of Files when Handling the Data.
+
+OVERVIEW:
+	This problem occurs usually in every aspect of processing data. Inorder to solve the issue 	of getting the datasets error, we need to keep a backup file of the dataset, so that we 	can use even after loosing the whole data that were working on. But still, it is time 	consuming to do it manually always. So, automatic saving of the previous dataset that was 	worked on could be the solution.
+
+SOLUTION: 
+	Automatic saving of files after working to the backup file. Each time the dataset will 	replace the data in the backup file.
+
+Steps to approach the problem: 
+	a copy is saved before accessing or updating the dataset keeps the last version of the 	dataset creates a copy automatically restores latest backup
+
+ALGORITHM:
+	Start by importing the os, which helps to find the files easily. 
+	shutil command is also imported so that handling large files to copy makes it easier. 
+	Initially create an empty backup file. 
+	Since, errors can occur, use try and except. 
+	In try, using shutil command, initially copy the original file to a empty backup file. 
+	Then, you can edit or work on the original dataset. 
+	When the work on the original dataset is completed, the file will be automatically saved 	into the backup file. 
+	In exception, that is if an error is occurred, the os will check if the backup file 	exists. 
+	If it exists, then the backup file is copied to the original file. 
+	If it does not exists, then print that it does not exist.
+

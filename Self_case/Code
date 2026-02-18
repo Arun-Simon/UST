@@ -1,0 +1,23 @@
+import os
+import shutil
+
+original_file="data.txt"
+backup_file="datacopy.txt"
+
+try:
+    shutil.copy(original_file,backup_file)
+    print("Backup is created")
+
+    with open(original_file,"w") as f:
+        f.write("New data")
+    
+    print("new data processed")
+
+except Exception as e:
+    print("error occured")
+
+    if os.path.exists(backup_file):
+        shutil.copy(backup_file,original_file)
+        print("backup file is restored ")
+    else:
+        print("backupfile not found")
