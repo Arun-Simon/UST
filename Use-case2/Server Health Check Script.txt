@@ -1,0 +1,23 @@
+Server Health Check Script
+
+Problem Statement: Operation team requires quick health summary.
+
+Objective: Build a script that reports:
+		CPU usage
+		Memory usage
+		Disk usage
+		Top processes
+		Active network connections
+
+Solution:
+
+Printed the current cpu usage $ top -bn1|grep "Cpu(s)" 
+Printed the current memory usage using free -h
+Printed the current disk usage using df -h
+Printed the active network connections using ss -tunap|head -10
+Printed the top processes using the top command
+
+
+
+
+
